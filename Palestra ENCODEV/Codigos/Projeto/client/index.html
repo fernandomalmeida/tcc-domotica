@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/app.css">
+	<script src="js/vendor/modernizr.js"></script>
+</head>
+<body>
+	<div data-ng-app="app">
+	<h1>Tela para Controle do Arduino</h1>
+	<div data-ng-controller="controleArduino">
+		<form>
+		<div class="row">
+			<div class="large-3 columns">
+				<label>Led1 ({{led1}})</label>
+				<div class="switch">
+					<input id="led1" type="checkbox" data-ng-model="led1" data-ng-change="change('led1')">
+					<label for="led1"></label>
+				</div>
+			</div>
+			<div class="large-3 columns">
+				<label>Led2 ({{led2}})</label>
+				<div class="switch">
+					<input id="led2" type="checkbox" data-ng-model="led2" data-ng-change="change('led2')">
+					<label for="led2"></label>
+				</div>
+			</div>
+			<div class="large-3 columns">
+				<label>Nivel Botao ({{botao}})</label>
+				<div class="progress round">
+					<span class="meter" ng-style="{width: botao}"></span>
+				</div>
+			</div>
+			<div class="large-3 columns">
+				<label>Buzzer ({{buzzer}})</label>
+				<div class="switch">
+					<input id="buzzer" type="checkbox" data-ng-model="buzzer" data-ng-change="change('buzzer')">
+					<label for="buzzer"></label>
+				</div>
+			</div>
+		</div>
+		</form>
+	</div>	
+	</div>
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>
